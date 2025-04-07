@@ -7,11 +7,11 @@ const databasePath = path.join(__dirname, './database.db');
 const DATABASE_URL = process.env.DATABASE_URL === undefined
     ? databasePath
     : process.env.DATABASE_URL;
-module.exports = { session: process.env.SESSION_ID || 'ezra',
+module.exports = { session: process.env.SESSION_ID || 'LUCKY-MD;;;=>eyJub2lzZUtleSI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoidUV2YkozMEh3Mm95K0ZzS3B2VSsyQXdFTjVUdEVVeXFJbWRaNmhXcVdtUT0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiVUs0RFlYOFQ1WmE0S0piZGdxNGtjVTFWTGZOMWNNdTUza0tOSjZmdStDWT0ifX0sInBhaXJpbmdFcGhlbWVyYWxLZXlQYWlyIjp7InByaXZhdGUiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJvSDNhM1hpQld5STJqaDBWMXVmSDRYTkt0QWw5MGVLTFZlMGNaR08vNzNzPSJ9LCJwdWJsaWMiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJ2dXNNVVFjbDFtWDN3bnEzazlVZFBsNlhRVk96V1RYR2w2NWl2MTJncGhrPSJ9fSwic2lnbmVkSWRlbnRpdHlLZXkiOnsicHJpdmF0ZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IkFLVlZPRWtYSngwR1lUdFh2RWtmYmtYVnB0eHhKVTBmQUJrTG5wZ1BDRVU9In0sInB1YmxpYyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6Ik5PN0pJTlQzRXlFajM3bThLSGtLME1STVQ1L3FZL2VwbitFOXV2TTRTMjQ9In19LCJzaWduZWRQcmVLZXkiOnsia2V5UGFpciI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoieUtGMWk4Ry9MY1VZVWdMckNqOUlJZVdIS2lWM3dXS2F0eTR6dmZZakszcz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiNytlNU5yUjFaZWtQbldIWnEzbzlTOS9PL21JT2lpaTJSTlVRNFpVVmxRbz0ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6InVwM0hVMW1VUjBIQ2RlMkFXc3dsZlVlaCtjRTl2bGVCTTFGbEtlZ1d2MHM1Wmw5NHZ0RG5yQy9kY3BhWEFYTGZxVTJjODJreTFwVE4rNDQrbXlQNWd3PT0ifSwia2V5SWQiOjF9LCJyZWdpc3RyYXRpb25JZCI6MTg5LCJhZHZTZWNyZXRLZXkiOiIyZkdWWFg0VmJaRncwNnZUMGhEZVp3R3pOZ1hhbVRtVmdIbmRyTkpvRU5RPSIsInByb2Nlc3NlZEhpc3RvcnlNZXNzYWdlcyI6W10sIm5leHRQcmVLZXlJZCI6MzEsImZpcnN0VW51cGxvYWRlZFByZUtleUlkIjozMSwiYWNjb3VudFN5bmNDb3VudGVyIjowLCJhY2NvdW50U2V0dGluZ3MiOnsidW5hcmNoaXZlQ2hhdHMiOmZhbHNlfSwiZGV2aWNlSWQiOiJ0Q0JQUVpjLVJjNkkyV0duUlBGOWt3IiwicGhvbmVJZCI6IjFkZjIyMTAzLTcwNWItNDI2OC04NWMxLWMyMTEwMjQwNGU3ZCIsImlkZW50aXR5SWQiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJrVmYyTW5DUVlOV2xXUk0wOWlZM0dmZEFlcHc9In0sInJlZ2lzdGVyZWQiOnRydWUsImJhY2t1cFRva2VuIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiellSOWZ6RmpoVlZPcENaSEZQVlQzbXJXdVZNPSJ9LCJyZWdpc3RyYXRpb24iOnt9LCJwYWlyaW5nQ29kZSI6IlNQRkVBVFBTIiwibWUiOnsiaWQiOiIxODc2MjMwMzMxNDo2OUBzLndoYXRzYXBwLm5ldCJ9LCJhY2NvdW50Ijp7ImRldGFpbHMiOiJDT1hwNnI0REVLVzYwYjhHR0FFZ0FDZ0EiLCJhY2NvdW50U2lnbmF0dXJlS2V5IjoiUGU5NW92VFhJZDNPYTVueWc2RGNHOGFPWVJ5ajRNSERiVk9CQXhuQTJTQT0iLCJhY2NvdW50U2lnbmF0dXJlIjoiRGloOUJXWFlQcmRWOEZJeHlNTmc4ZFhlVVd3aDNGczNXdzlLQ1h4WHBDUVBOQ0dRVTVrc0FRVnRLZGFDM3JRdlpJaVVvK2l5WjB3ZFhuOWtaSEIyQ2c9PSIsImRldmljZVNpZ25hdHVyZSI6ImlzdW5zRTNNWllGd1Rjd3NNZVpsZVZldXF3ekg4Q1VwUGF4R2FHQnlEdEJhZ08yUFNuaFlpY09jQzlwbW8rTmNYdk1pNWsrVHBzYm1KWndHUnZoSGd3PT0ifSwic2lnbmFsSWRlbnRpdGllcyI6W3siaWRlbnRpZmllciI6eyJuYW1lIjoiMTg3NjIzMDMzMTQ6NjlAcy53aGF0c2FwcC5uZXQiLCJkZXZpY2VJZCI6MH0sImlkZW50aWZpZXJLZXkiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJCVDN2ZWFMMDF5SGR6bXVaOG9PZzNCdkdqbUVjbytEQncyMVRnUU1ad05rZyJ9fV0sInBsYXRmb3JtIjoiYW5kcm9pZCIsImxhc3RBY2NvdW50U3luY1RpbWVzdGFtcCI6MTc0NDA2Nzg5MCwibXlBcHBTdGF0ZUtleUlkIjoiQUFBQUFLWVcifQ==',
     PREFIXE: process.env.PREFIX || "+",
-    GITHUB : process.env.GITHUB|| 'https://github.com/Fred1e/LUCKY_MD',
-    OWNER_NAME : process.env.OWNER_NAME || "Fredi",
-    NUMERO_OWNER : process.env.NUMERO_OWNER || "255752593977",  
+    GITHUB : process.env.GITHUB|| 'https://github.com/unknowncodeguy010/LUCKY_MD',
+    OWNER_NAME : process.env.OWNER_NAME || "corrupt",
+    NUMERO_OWNER : process.env.NUMERO_OWNER || "18762303314",  
               
     AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "non",
     AUTO_DOWNLOAD_STATUS: process.env.AUTO_DOWNLOAD_STATUS || 'non',
@@ -30,9 +30,9 @@ module.exports = { session: process.env.SESSION_ID || 'ezra',
     ANTI_CALL_TEXT : process.env.ANTI_CALL_TEXT || '',             
     GURL: process.env.GURL  || "https://whatsapp.com/channel/0029VaihcQv84Om8LP59fO3f",
     WEBSITE :process.env.GURL || "https://whatsapp.com/channel/0029VaihcQv84Om8LP59fO3f",
-    CAPTION : process.env.CAPTION || "✧⁠LUCKY_MD✧",
-    BOT : process.env.BOT_NAME || '✧⁠LUCKY_MD✧⁠',
-    MODE: process.env.PUBLIC_MODE || "no",              
+    CAPTION : process.env.CAPTION || "✧its my blood✧",
+    BOT : process.env.BOT_NAME || 'gaarakun',
+    MODE: process.env.PUBLIC_MODE || "yes",              
     TIMEZONE: process.env.TIMEZONE || "Africa/Dodoma", 
     PM_PERMIT: process.env.PM_PERMIT || 'no',
     HEROKU_APP_NAME : process.env.HEROKU_APP_NAME || null,
